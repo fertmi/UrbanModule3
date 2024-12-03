@@ -2,7 +2,7 @@
 def get_multiplied_digits(number):
     str_number = str(number)        # перевод числа в строку
     first = int(str_number[0])      # first присваиваем первую цифру
-    if len(str_number) > 1:         # если длина числа > 1
+    if len(str_number) > 1 and int(str_number[1:]) > 0:         # если длина числа > 1
         return first * get_multiplied_digits(int(str_number[1:])) # вызываем функцию со срезом: со второго числа и умножаем на первое
     else:
         return first                # если осталась 1 цифра возвращаем это число
